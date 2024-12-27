@@ -1,4 +1,7 @@
 
+mod stack;
+use stack::NodeStack;
+
 trait TreeComponent {
     fn left(&self) -> Option<impl TreeComponent>;
     fn right(&self) -> Option<impl TreeComponent>;
@@ -71,5 +74,28 @@ impl TreeComponent for Rope {
             }
         }
         false
+    }
+}
+
+impl Rope {
+    pub fn head(&self) -> Option<impl TreeComponent> {
+        if let Some(x) = &self.head {
+            return Some(*x.clone())
+        }
+        None
+    }
+
+    pub fn collect(&self) -> String {
+       let stack = NodeStack::new();
+        let head = match self.head() {
+            None => return String::new(),
+            Some(x) => x
+        };
+        
+       /*
+        * TODO: NEED TO IMPLEMENT THE REST OF COLLECT
+        */
+
+        String::new()
     }
 }
