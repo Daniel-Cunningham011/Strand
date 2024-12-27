@@ -1,0 +1,12 @@
+[package]
+name = "strand"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "strand_ropes"
+path = "strand_ropes/lib.rs"
+
+[dependencies]
+iced = "0.13.1"
+
