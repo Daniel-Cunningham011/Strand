@@ -1,5 +1,6 @@
 use crate::Node;
 
+#[derive(Clone)]
 pub struct NodeStack { 
     vec: Vec<Node>,
     size: usize,
